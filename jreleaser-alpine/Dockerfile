@@ -5,7 +5,7 @@ LABEL "org.opencontainers.image.description"="Release projects quickly and easil
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.0.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="514f118a09dc78c8e083b476eb2467d0988c14d5"
+LABEL "org.opencontainers.image.revision"="202accdd7f43fc81f00344d5d4561636315054c4"
 
 RUN apk add unzip
 
