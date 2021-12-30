@@ -5,7 +5,7 @@ LABEL "org.opencontainers.image.description"="Release projects quickly and easil
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.0.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="23fa1eb4ecbe1ba2255d8d5ab316949a3c4ae26d"
+LABEL "org.opencontainers.image.revision"="8011872fe8431baeac3af905502597bfa79afd8e"
 
 RUN apt-get update -y
 RUN apt-get install unzip
