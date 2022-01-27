@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-01-27T19:10:56.092Z
+# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-01-27T20:03:11.246002Z
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-slim"
@@ -6,7 +6,7 @@ LABEL "org.opencontainers.image.description"="Release projects quickly and easil
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.0.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="d03832cc0fb43a022dab584293fad006fd7d6d76"
+LABEL "org.opencontainers.image.revision"="805535677bd2d59972af0eb43d8b2a623c1e8541"
 
 RUN apt-get update -y
 RUN apt-get install unzip
