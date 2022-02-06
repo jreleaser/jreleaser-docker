@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-02-06T07:16:19.888875Z
+# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-02-06T20:09:13.945042Z
 FROM alpine:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-alpine"
@@ -6,7 +6,7 @@ LABEL "org.opencontainers.image.description"="Release projects quickly and easil
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.0.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="c394fc1d0acb4fc88b871e0e9e8b7d56ac20202f"
+LABEL "org.opencontainers.image.revision"="91d94f7b5cb7c84aa0e290d28bf662b87758d5a4"
 
 RUN apk add unzip
 
