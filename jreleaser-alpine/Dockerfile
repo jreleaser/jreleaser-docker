@@ -1,27 +1,27 @@
-# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-04-10T05:36:33.640517Z
+# Generated with JReleaser 1.0.0-SNAPSHOT at 2022-04-12T21:24:35.694835098Z
 FROM alpine:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-alpine"
 LABEL "org.opencontainers.image.description"="Release projects quickly and easily with JReleaser"
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
-LABEL "org.opencontainers.image.version"="1.0.0"
-LABEL "org.opencontainers.image.revision"="1878631152abc8a327d2e9d4c6bb79bcdd3120e3"
+LABEL "org.opencontainers.image.version"="1.1.0-SNAPSHOT"
+LABEL "org.opencontainers.image.revision"="5e190deb0e30545b9abdc684d8164a158b456bc4"
 
 RUN apk add unzip binutils fakeroot rpm
 
 COPY assembly/* /
 
-RUN unzip jreleaser-standalone-1.0.0-linux_musl-x86_64.zip && \
-    rm jreleaser-standalone-1.0.0-linux_musl-x86_64.zip && \
-    chmod +x jreleaser-standalone-1.0.0-linux_musl-x86_64/bin/jreleaser && \
-    chmod +x jreleaser-standalone-1.0.0-linux_musl-x86_64/bin/java && \
-    mv /jreleaser-entrypoint.sh /jreleaser-standalone-1.0.0-linux_musl-x86_64/bin && \
-    chmod +x /jreleaser-standalone-1.0.0-linux_musl-x86_64/bin/jreleaser-entrypoint.sh
+RUN unzip jreleaser-standalone-early-access-linux_musl-x86_64.zip && \
+    rm jreleaser-standalone-early-access-linux_musl-x86_64.zip && \
+    chmod +x jreleaser-standalone-early-access-linux_musl-x86_64/bin/jreleaser && \
+    chmod +x jreleaser-standalone-early-access-linux_musl-x86_64/bin/java && \
+    mv /jreleaser-entrypoint.sh /jreleaser-standalone-early-access-linux_musl-x86_64/bin && \
+    chmod +x /jreleaser-standalone-early-access-linux_musl-x86_64/bin/jreleaser-entrypoint.sh
 
-ENV PATH="${PATH}:/jreleaser-standalone-1.0.0-linux_musl-x86_64/bin"
+ENV PATH="${PATH}:/jreleaser-standalone-early-access-linux_musl-x86_64/bin"
 
 VOLUME /workspace
 
-ENTRYPOINT ["/jreleaser-standalone-1.0.0-linux_musl-x86_64/bin/jreleaser-entrypoint.sh"]
-CMD ["/jreleaser-standalone-1.0.0-linux_musl-x86_64/bin/jreleaser"]
+ENTRYPOINT ["/jreleaser-standalone-early-access-linux_musl-x86_64/bin/jreleaser-entrypoint.sh"]
+CMD ["/jreleaser-standalone-early-access-linux_musl-x86_64/bin/jreleaser"]
