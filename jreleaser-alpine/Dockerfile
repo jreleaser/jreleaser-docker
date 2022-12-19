@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.4.0-SNAPSHOT at 2022-12-19T19:16:39.998001391Z
+# Generated with JReleaser 1.4.0-SNAPSHOT at 2022-12-19T23:47:03.294591744Z
 FROM alpine:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-alpine"
@@ -6,7 +6,7 @@ LABEL "org.opencontainers.image.description"="Release projects quickly and easil
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.4.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="9f7bfe8a195acd02930ab8f89ac984d0cfcecce5"
+LABEL "org.opencontainers.image.revision"="41aec0f97907eb24ce152f37d63f158e3b622910"
 
 RUN apk add unzip binutils fakeroot rpm bash
 
