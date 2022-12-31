@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.5.0-SNAPSHOT at 2022-12-30T19:41:40.981026194Z
+# Generated with JReleaser 1.5.0-SNAPSHOT at 2022-12-31T00:33:55.751380085Z
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-slim"
@@ -6,7 +6,7 @@ LABEL "org.opencontainers.image.description"="Release projects quickly and easil
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.5.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="e6be00d7abe6bf40d46d24212efd802a302bdca7"
+LABEL "org.opencontainers.image.revision"="dc3054cb25327b84c7c86a8f2fd3621b08bef70d"
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Zurich
