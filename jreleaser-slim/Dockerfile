@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.6.0-SNAPSHOT at 2023-03-30T12:57:04.665911996Z
+# Generated with JReleaser 1.6.0-SNAPSHOT at 2023-03-30T14:15:29.652452697Z
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-slim"
