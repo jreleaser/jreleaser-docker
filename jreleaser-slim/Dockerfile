@@ -1,12 +1,12 @@
-# Generated with JReleaser 1.16.0-SNAPSHOT at 2024-12-31T11:03:40.173959401Z
+# Generated with JReleaser 1.16.0-SNAPSHOT at 2024-12-31T13:23:01.745765046Z
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-slim"
 LABEL "org.opencontainers.image.description"="Release projects quickly and easily with JReleaser"
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
-LABEL "org.opencontainers.image.version"="1.16.0"
-LABEL "org.opencontainers.image.revision"="e503a6bfada160746c835b927951d89174e3b9a9"
+LABEL "org.opencontainers.image.version"="1.17.0-SNAPSHOT"
+LABEL "org.opencontainers.image.revision"="b595eb44c4fa3051cbf0c0cd01d22b0a2e445d37"
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Zurich
@@ -14,13 +14,13 @@ RUN apt-get update && apt-get install -y unzip binutils fakeroot rpm
 
 COPY assembly/* /
 
-RUN unzip jreleaser-standalone-1.16.0-linux-x86_64.zip && \
-    rm jreleaser-standalone-1.16.0-linux-x86_64.zip && \
-    chmod +x jreleaser-standalone-1.16.0-linux-x86_64/bin/jreleaser && \
-    chmod +x jreleaser-standalone-1.16.0-linux-x86_64/bin/java && \
-    mv /jreleaser-entrypoint.sh /jreleaser-standalone-1.16.0-linux-x86_64/bin && \
-    chmod +x /jreleaser-standalone-1.16.0-linux-x86_64/bin/jreleaser-entrypoint.sh && \
-    mv /jreleaser-standalone-1.16.0-linux-x86_64 /jreleaser
+RUN unzip jreleaser-standalone-early-access-linux-x86_64.zip && \
+    rm jreleaser-standalone-early-access-linux-x86_64.zip && \
+    chmod +x jreleaser-standalone-early-access-linux-x86_64/bin/jreleaser && \
+    chmod +x jreleaser-standalone-early-access-linux-x86_64/bin/java && \
+    mv /jreleaser-entrypoint.sh /jreleaser-standalone-early-access-linux-x86_64/bin && \
+    chmod +x /jreleaser-standalone-early-access-linux-x86_64/bin/jreleaser-entrypoint.sh && \
+    mv /jreleaser-standalone-early-access-linux-x86_64 /jreleaser
 
 ENV PATH="${PATH}:/jreleaser/bin"
 
