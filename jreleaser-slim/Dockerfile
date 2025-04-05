@@ -1,4 +1,4 @@
-# Generated with JReleaser 1.18.0-SNAPSHOT at 2025-04-04T18:28:49.377364551Z
+# Generated with JReleaser 1.18.0-SNAPSHOT at 2025-04-05T13:12:38.053013818Z
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-slim"
@@ -6,11 +6,11 @@ LABEL "org.opencontainers.image.description"="Release projects quickly and easil
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
 LABEL "org.opencontainers.image.version"="1.18.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="65a0891241c11a940b83de87c8e46693d88a2ef3"
+LABEL "org.opencontainers.image.revision"="b42911d9ccf222f29f3c00b3672a651e195968aa"
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV TZ=Europe/Zurich
-RUN apt-get update && apt-get install -y unzip binutils fakeroot rpm
+RUN apt-get update && apt-get install -y unzip binutils fakeroot rpm git
 
 COPY assembly/* /
 
