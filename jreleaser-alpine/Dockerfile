@@ -1,24 +1,24 @@
-# Generated with JReleaser 1.18.0-SNAPSHOT at 2025-04-30T09:23:20.225786408Z
+# Generated with JReleaser 1.18.0-SNAPSHOT at 2025-04-30T10:35:17.171302539Z
 FROM alpine:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-alpine"
 LABEL "org.opencontainers.image.description"="Release projects quickly and easily with JReleaser"
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
-LABEL "org.opencontainers.image.version"="1.18.0"
-LABEL "org.opencontainers.image.revision"="33048eac0909ce38832dedbc6d1e24a2a8b90e04"
+LABEL "org.opencontainers.image.version"="1.19.0-SNAPSHOT"
+LABEL "org.opencontainers.image.revision"="4375cd3ef40abbcaf14991dcd70538d494390c40"
 
 RUN apk add unzip binutils fakeroot rpm bash git
 
 COPY assembly/* /
 
-RUN unzip jreleaser-standalone-1.18.0-linux_musl-x86_64.zip && \
-    rm jreleaser-standalone-1.18.0-linux_musl-x86_64.zip && \
-    chmod +x jreleaser-standalone-1.18.0-linux_musl-x86_64/bin/jreleaser && \
-    chmod +x jreleaser-standalone-1.18.0-linux_musl-x86_64/bin/java && \
-    mv /jreleaser-entrypoint.sh /jreleaser-standalone-1.18.0-linux_musl-x86_64/bin && \
-    chmod +x /jreleaser-standalone-1.18.0-linux_musl-x86_64/bin/jreleaser-entrypoint.sh && \
-    mv /jreleaser-standalone-1.18.0-linux_musl-x86_64 /jreleaser
+RUN unzip jreleaser-standalone-early-access-linux_musl-x86_64.zip && \
+    rm jreleaser-standalone-early-access-linux_musl-x86_64.zip && \
+    chmod +x jreleaser-standalone-early-access-linux_musl-x86_64/bin/jreleaser && \
+    chmod +x jreleaser-standalone-early-access-linux_musl-x86_64/bin/java && \
+    mv /jreleaser-entrypoint.sh /jreleaser-standalone-early-access-linux_musl-x86_64/bin && \
+    chmod +x /jreleaser-standalone-early-access-linux_musl-x86_64/bin/jreleaser-entrypoint.sh && \
+    mv /jreleaser-standalone-early-access-linux_musl-x86_64 /jreleaser
 
 ENV PATH="${PATH}:/jreleaser/bin"
 
