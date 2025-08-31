@@ -1,12 +1,12 @@
-# Generated with JReleaser 1.20.0-SNAPSHOT at 2025-08-31T16:31:37.345453357Z
+# Generated with JReleaser 1.20.0-SNAPSHOT at 2025-08-31T17:50:35.685596894Z
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-jreleaser-slim"
 LABEL "org.opencontainers.image.description"="Release projects quickly and easily with JReleaser"
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
-LABEL "org.opencontainers.image.version"="1.20.0"
-LABEL "org.opencontainers.image.revision"="16e3b060b85b214167e502e95c2ea9ece8c3f661"
+LABEL "org.opencontainers.image.version"="1.21.0-SNAPSHOT"
+LABEL "org.opencontainers.image.revision"="a69596b3518a2f84c292afe34ee0d134f7b569b2"
 LABEL "org.opencontainers.image.source"="https://github.com/jreleaser/jreleaser-docker"
 
 ARG DEBIAN_FRONTEND=noninteractive
@@ -15,14 +15,14 @@ RUN apt-get update && apt-get install -y unzip binutils fakeroot rpm git
 
 COPY assembly/ /
 
-RUN unzip jreleaser-standalone-1.20.0-linux-x86_64.zip && \
-    rm jreleaser-standalone-1.20.0-linux-x86_64.zip && \
-    chmod +x jreleaser-standalone-1.20.0-linux-x86_64/bin/jreleaser && \
-    chmod +x jreleaser-standalone-1.20.0-linux-x86_64/bin/java
+RUN unzip jreleaser-standalone-early-access-linux-x86_64.zip && \
+    rm jreleaser-standalone-early-access-linux-x86_64.zip && \
+    chmod +x jreleaser-standalone-early-access-linux-x86_64/bin/jreleaser && \
+    chmod +x jreleaser-standalone-early-access-linux-x86_64/bin/java
 
 VOLUME /workspace
 
-ENV JAVA_HOME="/jreleaser-standalone-1.20.0-linux-x86_64"
+ENV JAVA_HOME="/jreleaser-standalone-early-access-linux-x86_64"
 ENV PATH="${PATH}:${JAVA_HOME}/bin"
 
-ENTRYPOINT ["/jreleaser-standalone-1.20.0-linux-x86_64/bin/jreleaser"]
+ENTRYPOINT ["/jreleaser-standalone-early-access-linux-x86_64/bin/jreleaser"]
