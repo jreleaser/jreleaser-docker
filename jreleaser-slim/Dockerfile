@@ -1,12 +1,12 @@
-# Generated with JReleaser 1.22.0-SNAPSHOT at 2025-12-29T17:33:47.570567077Z
+# Generated with JReleaser 1.22.0-SNAPSHOT at 2025-12-31T16:10:46.364060173Z
 FROM ubuntu:latest
 
 LABEL "org.opencontainers.image.title"="jreleaser-jreleaser-slim"
 LABEL "org.opencontainers.image.description"="Release projects quickly and easily with JReleaser"
 LABEL "org.opencontainers.image.url"="https://jreleaser.org"
 LABEL "org.opencontainers.image.licenses"="Apache-2.0"
-LABEL "org.opencontainers.image.version"="1.22.0-SNAPSHOT"
-LABEL "org.opencontainers.image.revision"="a44555e76e9788e8d3c093dac29960273730afef"
+LABEL "org.opencontainers.image.version"="1.23.0-SNAPSHOT"
+LABEL "org.opencontainers.image.revision"="f5493705b958d65bac7026aef40a85ac7a783d91"
 LABEL "org.opencontainers.image.source"="https://github.com/jreleaser/jreleaser-docker"
 
 ARG DEBIAN_FRONTEND=noninteractive
